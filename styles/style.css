@@ -97,7 +97,6 @@
   color: var(--header-font-title-color);
   font-family: var(--font);
   font-size: 116px;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
@@ -276,7 +275,6 @@
   color: var(--footer-text-color);
   font-weight: 700;
   font-size: 116px;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--footer-text-shadow);
 }
@@ -342,8 +340,6 @@
     padding: 60px 20px 20px 20px;
   }
 
-  .topic__card {
-  }
   .topic__card-list__header {
     max-width: 236px;
   }
