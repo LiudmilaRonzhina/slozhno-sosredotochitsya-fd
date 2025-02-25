@@ -1,5 +1,472 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-content: center;
+  height: 100vh;
+  min-height: var(--header-min-height);
+  padding: 10px;
+  font-weight: 700;
+}
+
+.top-decor {
+  position: relative;
+}
+
+.top-decor::before {
+  content: "";
+  position: absolute;
+  justify-self: start;
+  align-self: self-end;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--header-decor-color);
+  border-right: 1px solid var(--header-decor-color);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.top-decor::after {
+  content: "";
+  position: absolute;
+  justify-self: start;
+  align-self: self-end;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--header-decor-color);
+  border-left: 1px solid var(--header-decor-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
+.header__rec {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  display: flex;
+  gap: 10px;
+}
+
+.header__rec::before {
+  content: "REC";
+  color: var(--header-decor-color);
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: "";
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  border: 5px solid var(--header-decor-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+.header__theme-menu {
+  grid-row: 1;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__title {
+  grid-row: 2;
+  justify-self: start;
+  color: var(--header-font-title-color);
+  font-family: var(--font);
+  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.common__title-content {
+  font-size: 18px !important;
+  line-height: 23.4px;
+}
+
+.header__title-content {
+  display: flex;
+  grid-row: 3;
+  align-self: center;
+  color: var(--header-font-content-color);
+}
+
+.title-decor {
+  background-color: var(--bg-content-color);
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  border: 0;
+  color: var(--button-color);
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-button-active);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--border-button-hover);
+}
+.header__theme-menu-button:active {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--border-button-active);
+  border-left: 0;
+}
+
+.introduction__card-list__header {
+  color: var(--common-font-accent-color);
+  font-size: 18px !important;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px 10px 20px 10px;
+}
+
+.introduction_card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__header {
+  color: var(--header-font-content-color);
+  font-size: 18px;
+}
+
+.content {
+  color: var(--common-font-content-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.topic {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px 10px 20px 10px;
+}
+
+.topic__card-list__header {
+  color: var(--common-font-accent-color);
+  font-size: 18px !important;
+}
+.topic__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 32px 10px 20px 10px;
+}
+
+.resume__accent {
+  margin-top: 10px;
+  font-weight: 400;
+}
+.resume__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-decor {
+  /*margin-bottom: 10px;*/
+}
+
+.resume__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume__card-list__header {
+  color: var(--common-font-accent-color);
+  font-size: 18px !important;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 1vm;
+  padding: 10px 10px 40px 10px;
+}
+
+.img_gallery {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery__header {
+  margin: 33px 10px 0px 10px;
+}
+
+.footer-decor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 667px;
+}
+
+.footer-decor::before {
+  content: "";
+  position: absolute;
+  justify-self: start;
+  align-self: self-end;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--header-decor-color);
+  border-right: 1px solid var(--header-decor-color);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.footer-decor::after {
+  content: "";
+  position: absolute;
+  justify-self: start;
+  align-self: self-end;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--header-decor-color);
+  border-left: 1px solid var(--header-decor-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
+.footer__logo {
+  color: var(--footer-text-color);
+  font-weight: 700;
+  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--footer-text-shadow);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--link-color);
+}
+.link:hover {
+  border-bottom: 1px solid var(--link-color);
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--link-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    --header-min-height: 1024px;
+    padding: 20px;
+  }
+  .header__rec {
+    top: 20px;
+    right: 29px;
+  }
+
+  .h1 {
+    margin-left: -110px;
+  }
+
+  .header__title {
+    margin-left: -19px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .header__title-content {
+    inline-size: 50%;
+  }
+  .top-decor::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+  .top-decor::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .introduction {
+    grid-template-columns: 1fr 2fr;
+    padding: 60px 20px 20px 20px;
+  }
+  .introduction__card-list__header {
+    grid-column: 1;
+  }
+
+  .introduction_card {
+    grid-column: 2;
+  }
+
+  .topic {
+    padding: 60px 20px 20px 20px;
+  }
+
+  .topic__card {
+  }
+  .topic__card-list__header {
+    max-width: 236px;
+  }
+  .resume {
+    grid-template-columns: 1fr 2fr;
+    padding: 60px 20px 20px 20px;
+  }
+  .resume__card-list__header {
+    grid-column: 1;
+  }
+  .resume__card-list {
+    grid-column: 2;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px 60px;
+  }
+  .gallery__header {
+    margin: 62px 20px 20px 20px;
+  }
+
+  .img_gallery {
+    object-fit: cover;
+  }
+
+  .img_gallery:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .img_gallery:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .img_gallery:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .img_gallery:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .footer__logo {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer-decor {
+    min-height: 1024px;
+  }
+
+  .footer-decor::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .footer-decor::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    --header-min-height: 768px;
+    padding: 20px;
+  }
+  .header__rec {
+    top: 20px;
+  }
+
+  .h1 {
+    margin-left: -19px;
+  }
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title-content {
+    margin-top: 16px;
+    inline-size: 50%;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .top-decor::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+  .top-decor::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+  .introduction {
+    grid-template-columns: 1fr 2.07fr;
+    padding: 60px 20px 20px 20px;
+  }
+
+  .topic {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .topic__card-list__header {
+    grid-column: 1/-1;
+    grid-row: 1;
+    max-width: 315px;
+  }
+
+  .resume {
+    grid-template-columns: 1fr 2.09fr;
+    /*возможно надо будет объединить с introduction__card - т.к. одно и тоже написано*/
+    padding: 60px 20px 20px 20px;
+  }
+
+  .footer-decor {
+    min-height: 768px;
+  }
 }
