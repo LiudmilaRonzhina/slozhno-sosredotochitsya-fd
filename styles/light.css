@@ -13,7 +13,7 @@
   --bg-color: #fff1f7;
   --accent-color: #ff8dcb;
   --bg-content-color: var(--accent-color);
-  --common-font-accent-color: var(--accent-color);
+  --common-font-accent-color: #353430;
   --common-font-content-color: #353430;
   --header-font-content-color: #353430;
   --header-font-title-color: #ffc2e6;
@@ -25,7 +25,8 @@
   --footer-text-color: #ffc2e6;
   --footer-text-shadow: var(--accent-color);
   --link-color: rgba(255  141 203 / 1);
-  --link-color-hover: rgb(50 49 45 / 0.4);
+  --link-color-hover:#353430;
+  --link-color-focus: #353430;
 }
 
 
@@ -40,7 +41,7 @@
     --bg-color: #fff1f7;
     --accent-color: #ff8dcb;
     --bg-content-color: var(--accent-color);
-    --common-font-accent-color: var(--accent-color);
+    --common-font-accent-color: #353430;
     --common-font-content-color: #353430;
     --header-font-content-color: #353430;
     --header-font-title-color: #ffc2e6;
@@ -52,7 +53,8 @@
     --footer-text-color: #ffc2e6;
     --footer-text-shadow: var(--accent-color);
     --link-color:  rgba(255  141 203 / 1);
-    --link-color-hover:rgb(50 49 45 / 0.4);
+    --link-color-hover:#353430;
+    --link-color-focus: #353430;
   }
 
   .header__rec {

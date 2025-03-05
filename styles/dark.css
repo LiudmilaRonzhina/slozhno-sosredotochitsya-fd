@@ -25,7 +25,8 @@
   --footer-text-color: #db00ff;
   --footer-text-shadow: var(--accent-color);
   --link-color: var(--accent-color);
-  --link-color-hover: rgb(255 0 112 / 0.4);
+  --link-color-hover:#F1B2CE;
+  --link-color-focus:#F1B2CE;
 }
 
 
@@ -53,10 +54,11 @@
     --footer-text-color: #db00ff;
     --footer-text-shadow: var(--accent-color);
     --link-color: var(--accent-color);
-    --link-color-hover: rgb(255 0 112 / 0.4);
+    --link-color-hover: #F1B2CE;
+    --link-color-focus:#F1B2CE;
   }
 
-  .theme-dark .header__rec {
+.header__rec {
     display: flex;
   }
 }

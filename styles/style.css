@@ -237,7 +237,7 @@
 }
 
 .link:focus-visible {
-  outline: 1px solid var(--link-color);
+  outline: 1px solid var(--link-color-focus);
 }
 
 @media (width >= 768px) {
